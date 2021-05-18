@@ -1,0 +1,16 @@
+h1{
+    color:red;
+}
+.form-align{
+    width:40%;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    
+    }
+    .button-center{
+        text-align: center;
+    }

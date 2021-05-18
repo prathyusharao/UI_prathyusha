@@ -1,0 +1,270 @@
+<div class="center">
+    <h1>Welcome To Registration</h1>
+</div>
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="mt-3 ml-5">
+    <form #loginform="ngForm">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                <div class="col-md-2 col-sm-12 col-xs-12">
+                    <label for="MEMBER NAME">Member Name:</label>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <input required type="text" [(ngModel)]="memberregistration.membername" name="membername"
+                        id="membername" pattern="[a-zA-Z][a-zA-z ]+"  #membername="ngModel" class="form-control"
+                        placeholder="Enter your Full Name" />
+
+                    <div role="alert" class="mt-3" id="idErrorDiv"
+                        *ngIf="membername.errors && (membername.dirty || membername.touched)">
+                        <span class="text-danger" *ngIf="membername.errors.required">Required</span>
+                        <span class="text-danger" *ngIf="membername.errors.pattern">Invalid</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                        <label for="Dob">Dob:</label>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <input type="date" required name="dob" id="dob"
+                            [(ngModel)]="memberregistration.dob" class="form-control" #dob="ngModel"
+                            placeholder="Enter your Date Of Birth" />
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                            *ngIf="dob.errors && (dob.dirty || dob.touched)">
+                            <span class="text-danger" *ngIf="dob.errors.required">Required</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="Address">Address: </label>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="text" [(ngModel)]="memberregistration.address" required name="address"
+                            pattern="[A-Za-z0-9'\.\-\s\.]" id="address" class="form-control" #address="ngModel" placeholder="Enter your Address" />
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="address.errors && (address.dirty || address.touched)">
+                                <span class="text-danger" *ngIf="address.errors.required">Required</span>
+                                <!--<span class="text-danger" *ngIf="address.errors.pattern">Invalid</span>-->
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label for="State">State: </label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <input type="text" [(ngModel)]="memberregistration.state" required name="state"
+                                    id="state" pattern="[a-zA-Z][a-zA-z ]+" class="form-control" #state="ngModel" placeholder="Enter your state" />
+                                <div role="alert" class="mt-3" id="idErrorDiv"
+                                    *ngIf="state.errors && (state.dirty || state.touched)">
+                                    <span class="text-danger" *ngIf="state.errors.required">Required</span>
+                                    <span class="text-danger" *ngIf="state.errors.pattern">Invalid</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label for="Country">Country : </label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <input type="text" [(ngModel)]="memberregistration.country" required name="country"
+                                    id="country" pattern="[a-zA-Z][a-zA-z ]+" class="form-control" #country="ngModel"
+                                    placeholder="Enter your country" />
+                                <div role="alert" class="mt-3" id="idErrorDiv"
+                                    *ngIf="country.errors && (country.dirty || country.touched)">
+                                    <span class="text-danger" *ngIf="country.errors.required">Required</span>
+                                    <span class="text-danger" *ngIf="country.errors.pattern">Invalid</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <label for="Pan">Pan: </label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <input type="text" [(ngModel)]="memberregistration.pan" required name="pan" id="pan"
+                                    maxlength="10" minlength="10" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                                    class="form-control" #pan="ngModel" placeholder="Enter your Pan Number" />
+                                <div role="alert" class="mt-3" id="idErrorDiv"
+                                    *ngIf="pan.errors && (pan.dirty || pan.touched)">
+                                    <span class="text-danger" *ngIf="pan.errors.required">Required</span>
+                                    <span class="text-danger" *ngIf="pan.errors.minlength">Pan no must be 10 characters
+                                        long</span><br>
+                                    <span class="text-danger" *ngIf="pan.errors.pattern">Invalid Pan Number</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="Contact No">Contact No: </label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="text" [(ngModel)]="memberregistration.contactno" required name="contactno"
+                                id="contactno" minlength="10" maxlength="10" pattern="^[0-9]*$" class="form-control" #contactno="ngModel"
+                                placeholder="Enter your Mobile Number" />
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="contactno.errors && (contactno.dirty || contactno.touched)">
+                                <span class="text-danger" *ngIf="contactno.errors.required">Required</span><br>
+                                <span class="text-danger" *ngIf="contactno.errors.pattern">Invalid</span><br>
+                                <span class="text-danger" *ngIf="contactno.errors.minlength">Contact No must be 10
+                                    characters long</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                          <br>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="EMAIL ADDRESS">Email Address: </label>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="email" email [(ngModel)]="memberregistration.emailaddress" required
+                                name="email" id="email" required placeholder="Enter Your EmailAddress"
+                                class="form-control" #emailaddress="ngModel"
+                                pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" />
+
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="emailaddress.errors && (emailaddress.dirty || emailaddress.touched)">
+                                <span class="text-danger" *ngIf="emailaddress.errors.required">Required</span>
+                                <span class="text-danger" *ngIf="emailaddress.errors.pattern">Incorrect Email
+                                    Address</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                         <br>
+
+                        <!--dependent details-->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="DependentName">DependentName:</label>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="text" name="dependent1name" id="dependent1name" pattern="[a-zA-Z][a-zA-z ]+"
+                                [(ngModel)]="memberregistration.dependent1name" #dependent1name="ngModel"
+                                class="form-control" placeholder="Enter your Name" required />
+
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="dependent1name.errors && (dependent1name.dirty || dependent1name.touched)">
+                                <span class="text-danger" *ngIf="dependent1name.errors.required">Required</span>
+                                <span class="text-danger" *ngIf="dependent1name.errors.pattern">Invalid</span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="Dob">Dob:</label>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="date" required name="dependent1dob" id="dependent1dob"
+                                [(ngModel)]="memberregistration.dependent1dob" class="form-control"
+                                #dependent1dob="ngModel" placeholder="Enter your Date Of Birth" />
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="dependent1dob.errors && (dependent1dob.dirty || dependent1dob.touched)">
+                                <span class="text-danger" *ngIf="dependent1dob.errors.required">Required</span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="DependentName">DependentName:</label>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="text" name="dependent2name" id="dependent2name" pattern="[a-zA-Z][a-zA-z ]+"
+                                [(ngModel)]="memberregistration.dependent2name" class="form-control"
+                                #dependent2name="ngModel" placeholder="Enter your Name" required />
+
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="dependent2name.errors && (dependent2name.dirty || dependent2name.touched)">
+                                <span class="text-danger" *ngIf="dependent2name.errors.required">Required</span>
+                                <span class="text-danger" *ngIf="dependent2name.errors.pattern">Invalid</span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                     <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                                <div class="col-md-2 col-sm-12 col-xs-12">
+                            <label for="Dob">Dob:</label>
+                             </div>
+                             <div class="col-md-4 col-sm-12 col-xs-12">
+                            <input type="date" required name="Dob" id="Dob" [(ngModel)]="memberregistration.dependent2dob"
+                                class="form-control" #dependent2dob="ngModel" placeholder="Enter your Date Of Birth" />
+                            <div role="alert" class="mt-3" id="idErrorDiv"
+                                *ngIf="dependent2dob.errors && (dependent2dob.dirty || dependent2dob.touched)">
+                                <span class="text-danger" *ngIf="dependent2dob.errors.required">Required</span>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 col-xs-12"></div>
+                        </div>
+                        <br><br>
+
+                        <div class="button-center">
+                        <div class="form-group">
+                            <button class="btn btn-primary"  (click)="registerNow()">
+                                Register
+                            </button>
+                            <button class="btn btn-secondary ml-5" (click)="cancel()">
+                                Cancel
+                            </button>
+                        </div>
+                        </div>
+                        <div [ngStyle]="{'color':'Red'}">
+                        <div *ngIf="isError">
+                           An error occurred. Please try again later
+                        </div>
+                       </div>
+                    </div>
